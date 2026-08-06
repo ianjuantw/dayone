@@ -20,8 +20,7 @@ test("renders the DayOne onboarding experience", async () => {
 
   const html = await response.text();
   assert.match(html, /DayOne/);
-  assert.match(html, /Let(?:&apos;|&#x27;|')s bring the repo to life/);
-  assert.match(html, /Environment doctor/);
-  assert.match(html, /Your onboarding journey/i);
+  assert.match(html, /Preparing your onboarding journey/);
+  assert.match(html, /aria-live="polite"/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);
 });
